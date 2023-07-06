@@ -5,6 +5,8 @@ import getBillboard from '@/functions/getBillboard'
 import getProducts from '@/functions/getProducts'
 import Image from 'next/image'
 
+export const revalidate = 0;
+
 export default async function Home() {
 
   const products = await getProducts({ isFeatured: true });

@@ -6,6 +6,8 @@ import Container from '@/components/ui/Container';
 import useCart from '@/hooks/useCart';
 import { useEffect, useState } from 'react';
 
+export const revalidate = 0;
+
 const CartPage = () => {
 
     const [isMounted, setIsMounted] = useState(false);
