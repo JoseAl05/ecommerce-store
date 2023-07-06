@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { formatter } from '@/lib/uitls';
 
 interface CurrencyProps {
-    price:string;
+    price?:string | number;
 }
 
 const Currency:React.FC<CurrencyProps> = ({price}) => {
@@ -21,9 +21,9 @@ const Currency:React.FC<CurrencyProps> = ({price}) => {
 
 
     return (
-        <div className='font-semibold'>
+        <p className='font-semibold'>
             {formatter.format(Number(price))}
-        </div>
+        </p>
     );
 }
 
